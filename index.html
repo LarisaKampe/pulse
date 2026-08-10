@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulse — The clinic that never misses a beat</title>
+    <meta
+      name="description"
+      content="Pulse layers AI onto your clinic's front desk so every lead gets answered, every follow-up gets sent, and every seat gets filled — automatically."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- ===== BACKGROUND CANVAS ===== -->
+    <canvas id="pulse-canvas"></canvas>
+    <div class="grain"></div>
+
+    <!-- ===== NAV ===== -->
+    <header class="nav" id="top">
+      <div class="nav__inner">
+        <a href="#top" class="nav__logo">
+          <span class="nav__logo-mark" aria-hidden="true"></span>
+          Pulse
+        </a>
+        <nav class="nav__links">
+          <a href="#work">How it works</a>
+          <a href="#features">Tools</a>
+          <a href="#pricing">Plans</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#cta" class="btn btn--ghost nav__cta">Book a walkthrough</a>
+        <button class="nav__burger" id="burger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#work">How it works</a>
+      <a href="#features">Tools</a>
+      <a href="#pricing">Plans</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cta" class="btn btn--solid">Book a walkthrough</a>
+    </div>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero">
+        <div class="hero__eyebrow reveal">
+          <span class="dot"></span> Built for physical therapy &amp; wellness
+          clinics
+        </div>
+        <h1 class="hero__title">
+          <span class="line reveal">The clinic that</span>
+          <span class="line reveal">never misses</span>
+          <span class="line reveal"><em>a beat.</em></span>
+        </h1>
+        <p class="hero__sub reveal">
+          Pulse layers AI onto your front desk — every lead answered, every
+          follow-up sent, every seat filled. While you're busy doing the part
+          you actually trained for.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#cta" class="btn btn--solid">See Pulse live</a>
+          <a href="#work" class="btn btn--outline">How it works ↓</a>
+        </div>
+
+        <div class="hero__readout reveal" aria-hidden="true">
+          <div class="readout__item">
+            <span class="readout__label">RESPONSE TIME</span>
+            <span class="readout__value" data-count="90">0</span>
+            <span class="readout__unit">sec avg</span>
+          </div>
+          <div class="readout__divider"></div>
+          <div class="readout__item">
+            <span class="readout__label">LEADS FOLLOWED UP</span>
+            <span class="readout__value" data-count="100">0</span>
+            <span class="readout__unit">%</span>
+          </div>
+          <div class="readout__divider"></div>
+          <div class="readout__item">
+            <span class="readout__label">FRONT DESK HEADCOUNT ADDED</span>
+            <span class="readout__value" data-count="0">0</span>
+            <span class="readout__unit">people</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROBLEM ===== -->
+      <section class="problem" id="problem">
+        <p class="section-eyebrow reveal">Meanwhile, behind the scenes</p>
+        <h2 class="section-title reveal">
+          You went into this to treat patients.<br />Instead, you're running
+          triage on your own business.
+        </h2>
+
+        <div class="problem__grid">
+          <div class="problem__card reveal">
+            <span class="problem__index">01</span>
+            <h3>Leads go cold in an inbox nobody has time to open</h3>
+            <p>
+              By the time someone gets to it, the person has already booked with
+              the clinic down the street.
+            </p>
+          </div>
+          <div class="problem__card reveal">
+            <span class="problem__index">02</span>
+            <h3>Follow-ups quietly fall off the list</h3>
+            <p>
+              Not from carelessness — there just aren't enough hours to chase
+              every "let me check my schedule."
+            </p>
+          </div>
+          <div class="problem__card reveal">
+            <span class="problem__index">03</span>
+            <h3>Revenue swings with whoever remembered to call back</h3>
+            <p>
+              A good month and a slow month usually have the same number of
+              leads. Just different follow-through.
+            </p>
+          </div>
+          <div class="problem__card reveal">
+            <span class="problem__index">04</span>
+            <h3>Hiring another front-desk role sounds expensive and messy</h3>
+            <p>
+              Salary, training, turnover, sick days — and you're back to square
+              one every time someone leaves.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TRANSITION / WORK ===== -->
+      <section class="transition" id="work">
+        <div class="transition__inner">
+          <p class="section-eyebrow reveal">There's a better way</p>
+          <h2 class="section-title reveal">
+            Pulse runs your front desk<br />so nothing slips through.
+          </h2>
+          <div class="transition__tags reveal">
+            <span>Admin, eliminated</span>
+            <span>Revenue, evened out</span>
+            <span>Follow-up, automatic</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FEATURES ===== -->
+      <section class="features" id="features">
+        <article class="feature">
+          <div class="feature__copy reveal">
+            <div class="feature__eyebrow">
+              <span class="feature__num">01</span> CAPTURE — AI Text Responder
+            </div>
+            <h3>Meet every lead in the first five minutes</h3>
+            <p>
+              While other clinics leave people on read for hours, Pulse texts
+              back the moment someone reaches out — answers their questions,
+              handles the back-and-forth, and drops them straight onto your
+              calendar. You never touch it.
+            </p>
+          </div>
+          <div class="feature__visual reveal">
+            <div class="phone-mock">
+              <div class="phone-mock__notch"></div>
+              <div class="chat-bubble chat-bubble--in">
+                Hi! Do you take my insurance for a knee eval?
+              </div>
+              <div class="chat-bubble chat-bubble--out">
+                Yes — we're in-network with most major plans. Want me to grab
+                you a slot this week?
+              </div>
+              <div class="chat-bubble chat-bubble--in">
+                Yes please, Thursday afternoon?
+              </div>
+              <div class="chat-bubble chat-bubble--out chat-bubble--typing">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--reverse">
+          <div class="feature__copy reveal">
+            <div class="feature__eyebrow">
+              <span class="feature__num">02</span> ANSWER — AI Phone Line
+            </div>
+            <h3>
+              Stop answering the phone when you should be running your clinic
+            </h3>
+            <p>
+              Your AI front desk picks up every call you can't — books
+              appointments, answers questions in your clinic's own voice, and
+              fills the calendar while you're off the clock. No hold music, no
+              hallway noise, no missed calls.
+            </p>
+          </div>
+          <div class="feature__visual reveal">
+            <div class="wave-card">
+              <div class="wave-card__status">
+                <span class="pulse-led"></span> Live call · 00:42
+              </div>
+              <svg
+                class="waveform"
+                viewBox="0 0 300 60"
+                preserveAspectRatio="none"
+              >
+                <polyline
+                  points="0,30 20,30 30,10 40,50 50,30 70,30 80,18 90,42 100,30 130,30 140,8 150,52 160,30 190,30 200,20 210,40 220,30 250,30 260,12 270,48 280,30 300,30"
+                />
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature__copy reveal">
+            <div class="feature__eyebrow">
+              <span class="feature__num">03</span> SCHEDULE — Auto Calendar
+            </div>
+            <h3>Set it once. It fills itself.</h3>
+            <p>
+              Every conversation ends the same way — a booked slot, no
+              back-and-forth about availability. Pulse checks your real
+              calendar, offers real openings, and confirms without a human ever
+              touching the exchange.
+            </p>
+          </div>
+          <div class="feature__visual reveal">
+            <div class="calendar-card">
+              <div class="calendar-card__row calendar-card__row--head">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span
+                ><span>Fri</span>
+              </div>
+              <div class="calendar-card__grid">
+                <span></span><span class="on"></span><span></span
+                ><span class="on"></span><span></span> <span class="on"></span
+                ><span></span><span class="on"></span><span></span
+                ><span class="on"></span> <span></span><span class="on"></span
+                ><span class="on"></span><span></span><span class="on"></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature feature--reverse">
+          <div class="feature__copy reveal">
+            <div class="feature__eyebrow">
+              <span class="feature__num">04</span> TRACK — Pulse CRM
+            </div>
+            <h3>Nothing gets lost between hello and booked</h3>
+            <p>
+              Every lead tracked, every conversation logged, every prospect
+              moving through a clear pipeline — automatically, so you always
+              know exactly who's being followed up with and what happens next.
+            </p>
+            <ul class="feature__list">
+              <li>Every lead tracked from first touch</li>
+              <li>Every conversation logged and searchable</li>
+              <li>Every prospect moving through a visible pipeline</li>
+            </ul>
+          </div>
+          <div class="feature__visual reveal">
+            <div class="pipeline-card">
+              <div class="pipeline-card__col">
+                <span class="pipeline-card__label">New</span>
+                <div class="pipeline-card__chip"></div>
+                <div class="pipeline-card__chip"></div>
+              </div>
+              <div class="pipeline-card__col">
+                <span class="pipeline-card__label">Contacted</span>
+                <div class="pipeline-card__chip"></div>
+              </div>
+              <div class="pipeline-card__col">
+                <span class="pipeline-card__label">Booked</span>
+                <div
+                  class="pipeline-card__chip pipeline-card__chip--done"
+                ></div>
+                <div
+                  class="pipeline-card__chip pipeline-card__chip--done"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature">
+          <div class="feature__copy reveal">
+            <div class="feature__eyebrow">
+              <span class="feature__num">05</span> CONVERT — Website Concierge
+            </div>
+            <h3>Your site finally works while you sleep</h3>
+            <p>
+              A concierge that lives on your website, answers every question a
+              visitor has, and books them onto your calendar before they think
+              about closing the tab.
+            </p>
+          </div>
+          <div class="feature__visual reveal">
+            <div class="widget-card">
+              <div class="widget-card__bar">Ask Pulse</div>
+              <div class="widget-card__msg">
+                "Do you offer evening appointments?"
+              </div>
+              <div class="widget-card__reply">
+                We do — Tuesdays &amp; Thursdays until 7pm. Want me to hold you
+                a spot?
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ===== PRICING ===== -->
+      <section class="pricing" id="pricing">
+        <p class="section-eyebrow reveal">Choose a plan</p>
+        <h2 class="section-title reveal">
+          Find what your clinic actually needs
+        </h2>
+
+        <div class="pricing__grid">
+          <div class="price-card reveal">
+            <h3>Pulse Core</h3>
+            <p class="price-card__term">6-month commitment</p>
+            <ul class="price-card__list">
+              <li class="on">Pulse CRM — <b>$99/mo</b></li>
+              <li class="on">EMR integration</li>
+              <li class="on">Live support</li>
+              <li class="off">Website concierge</li>
+              <li class="off">AI text lead responder</li>
+              <li class="off">AI review generation</li>
+              <li class="off">Win-back follow-ups</li>
+              <li class="off">Paid ads managed for you</li>
+              <li class="off">AI phone line</li>
+            </ul>
+            <a href="#cta" class="btn btn--outline price-card__cta"
+              >Ask about pricing</a
+            >
+          </div>
+
+          <div class="price-card price-card--featured reveal">
+            <span class="price-card__badge">Most popular</span>
+            <h3>Pulse</h3>
+            <p class="price-card__term">6-month commitment</p>
+            <ul class="price-card__list">
+              <li class="on">Pulse CRM — <b>$99/mo</b></li>
+              <li class="on">EMR integration</li>
+              <li class="on">Live support</li>
+              <li class="on">Website concierge</li>
+              <li class="on">AI text lead responder</li>
+              <li class="on">AI review generation</li>
+              <li class="on">Win-back follow-ups</li>
+              <li class="on">Paid ads — <b>free</b></li>
+              <li class="off">AI phone line</li>
+            </ul>
+            <a href="#cta" class="btn btn--solid price-card__cta"
+              >Ask about pricing</a
+            >
+          </div>
+
+          <div class="price-card reveal">
+            <h3>Pulse+</h3>
+            <p class="price-card__term">6-month commitment</p>
+            <ul class="price-card__list">
+              <li class="on">Pulse CRM — <b>$99/mo</b></li>
+              <li class="on">EMR integration</li>
+              <li class="on">Live support</li>
+              <li class="on">Website concierge</li>
+              <li class="on">AI text lead responder</li>
+              <li class="on">AI review generation</li>
+              <li class="on">Win-back follow-ups</li>
+              <li class="on">Paid ads — <b>free</b></li>
+              <li class="on">AI phone line — <b>setup fee + usage</b></li>
+            </ul>
+            <a href="#cta" class="btn btn--outline price-card__cta"
+              >Ask about pricing</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section class="faq" id="faq">
+        <p class="section-eyebrow reveal">Questions, answered plainly</p>
+        <h2 class="section-title reveal">FAQ</h2>
+
+        <div class="faq__list">
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              What exactly is the Pulse CRM?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                It's the operating system your clinic never had — built
+                specifically for wellness and PT practices, not generic software
+                you're bending to fit. Automated emails, lead tracking, and a
+                pipeline you can actually see at a glance.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              Is the AI phone line actually good?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Genuinely, yes. It's trained on a knowledge base built from your
+                clinic — it sounds like it's sitting at your front desk,
+                background noise and all, and the awkward AI pause you're
+                picturing doesn't happen. It's smooth enough that you'll
+                actually want the phone to ring.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              What does "integration" mean here?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Every tool funnels to one outcome: a booked call on your
+                calendar. Connected to your scheduling platform, we go further
+                and handle real reschedules inside your system directly — no
+                babysitting required.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              How does the AI know what to say?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                It's not improvising. Before launch, we build a deep knowledge
+                base from your answers about your services, your tone, your
+                FAQs, your edge cases. It knows your clinic the way a great
+                front-desk hire would after six months — except it started on
+                day one, and its whole job is booking the call.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              Are you really running my ads for free?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                Yes — full stop. We build the landing pages, set up tracking,
+                and write the ad copy for your Google campaigns. On the Meta
+                side, we teach you to run them yourself and share the
+                best-performing creative every week.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              What counts as a "lost lead" worth chasing?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                You already know these people: the inquiry who booked a
+                discovery call and never scheduled the eval, the "let me check
+                with insurance" who vanished, the lead that went quiet after
+                real interest. Pulse goes after exactly them — automatically,
+                without you having to remember to.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__q">
+              How does phone pricing work?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__a">
+              <p>
+                You pay for what you use instead of a flat fee regardless of
+                volume. Busy month, you pay more; slow month, you pay less. It
+                scales with your clinic instead of against it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FINAL CTA ===== -->
+      <section class="cta" id="cta">
+        <h2 class="cta__title reveal">Your clinic,<br />running itself.</h2>
+        <p class="cta__sub reveal">
+          You didn't start a clinic to chase leads. Every missed follow-up is
+          revenue that already walked in the door once — Pulse makes sure it
+          doesn't walk out again.
+        </p>
+        <a href="#top" class="btn btn--solid btn--lg reveal">Apply for Pulse</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <span class="nav__logo-mark" aria-hidden="true"></span> Pulse
+        </div>
+        <div class="site-footer__cols">
+          <div>
+            <h4>Explore</h4>
+            <a href="#work">How it works</a>
+            <a href="#features">Tools</a>
+            <a href="#pricing">Plans</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div>
+            <h4>Say hello</h4>
+            <a href="mailto:hello@pulseclinic.ai">hello@pulseclinic.ai</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <span>© 2026 Pulse. All rights reserved.</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="pulse-scene.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
