@@ -175,6 +175,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* =========================================================
+     CUSTOM CURSOR — glowing coral dot
+  ========================================================= */
+  const cursorDot = document.querySelector('.cursor-dot');
+  const canHoverFine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (cursorDot && canHoverFine) {
+    const quickX = reduceMotion ? null : gsap.quickTo(cursorDot, 'x', { duration: 0.15, ease: 'power2.out' });
+    const quickY = reduceMotion ? null : gsap.quickTo(cursorDot, 'y', { duration: 0.15, ease: 'power2.out' });
+
+    window.addEventListener('mousemove', (e) => {
+      if (reduceMotion) {
+        gsap.set(cursorDot, { x: e.clientX, y: e.clientY });
+      } else {
+        quickX(e.clientX);
+        quickY(e.clientY);
+      }
+    });
+
+    document.addEventListener('mouseleave', () => cursorDot.classList.add('is-hidden'));
+    document.addEventListener('mouseenter', () => cursorDot.classList.remove('is-hidden'));
+  }
+
+  /* =========================================================
      NAV BACKGROUND ON SCROLL (subtle)
   ========================================================= */
   ScrollTrigger.create({
